@@ -47,7 +47,7 @@ const BagSummary = () => {
           <span className="price-item-value">₹{finalPayment}</span>
         </div>
       </div>
-      <Link to="/donePayment">
+      <Link onClick={scrollTo(0, 0)} to="/donePayment">
         <button className="btn-place-order">
           <div className="css-xjhrni">PLACE ORDER</div>
         </button>

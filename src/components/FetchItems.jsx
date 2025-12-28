@@ -13,7 +13,7 @@ const FetchItems = () => {
     const signal = controller.signal;
 
     dispatch(fetchStatusAction.markfetchingStarted());
-    fetch("http://localhost:8080/items", { signal })
+    fetch("https://mynthra-clone-backend-code.onrender.com/items", { signal })
       .then((res) => res.json())
 
       .then(({ items }) => {

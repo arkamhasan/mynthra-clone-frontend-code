@@ -30,7 +30,7 @@ const OrderPlaced = () => {
           </p>
           <p>Delivery in 3–5 business days</p>
         </div>
-        <Link to="/">
+        <Link onClick={scrollTo(0, 0)} to="/">
           <button className="continue-btn">Continue Shopping</button>
         </Link>
       </div>
