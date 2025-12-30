@@ -2,12 +2,12 @@ import React from "react";
 import { IoMdPerson } from "react-icons/io";
 import { FaGrinHearts } from "react-icons/fa";
 import { IoBagAdd } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Header = () => {
   const bag = useSelector((store) => store.bag);
-
+  const navigate = useNavigate();
   return (
     <header>
       <div className="logo_container">
@@ -37,21 +37,21 @@ const Header = () => {
         <span className="material-symbols-outlined search_icon">search</span>
       </div>
       <div className="action_bar">
-        <div className="action_container">
+        <div onClick={() => navigate("/profile")} className="action_container">
           <IoMdPerson />
           <span className="action_name">Profile</span>
         </div>
 
-        <div className="action_container">
+        <div onClick={() => navigate("/wishlist")} className="action_container">
           <FaGrinHearts />
           <span className="action_name">Wishlist</span>
         </div>
 
-        <Link className="action_container" to="/bag">
+        <div onClick={() => navigate("/bag")} className="action_container">
           <IoBagAdd />
           <span className="action_name">Bag</span>
           <span className="bag-item-count">{bag.length}</span>
-        </Link>
+        </div>
       </div>
     </header>
   );

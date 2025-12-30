@@ -225,6 +225,7 @@ header {
 }
 .bag-icon{
   margin-bottom: 4px;
+
 }
 .btn-remove-bag{
    margin-top: 8px;
@@ -681,6 +682,15 @@ flex-direction: column;
 
 
 }
+
+.msg-title{
+padding-left: 1rem;
+padding-right: 1rem;
+font-size: 1.2rem;
+width: 90%;
+text-align: center;
+}
+
 .btn-back {
     margin-top: 8px;
     font-size: 18px;
@@ -712,4 +722,51 @@ flex-direction: column;
 }
 .done-icon:hover{
   font-size: 12rem;
+}
+
+.btn-add-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.like-icon{
+  color: #ff3f6c  ;
+}
+
+
+.wishList-add-btn{
+font-size: 1.5rem;
+background-color: #fff;
+border: none;
+border-radius: 50%;
+width: 15%;
+text-align: center;
+padding:4px;
+transition: .5s;
+display: flex;
+/* margin-left:6px ; */
+ box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+
+}
+
+.wishList-add-btn:hover{
+font-size: 1.8rem;
+}
+
+.wishList-remove-btn{
+font-size: 1.5rem;
+display: flex;
+background-color: #fff;
+border: none;
+border-radius: 50%;
+width: 15%;
+text-align: center;
+padding:4px;
+transition: .5s;
+/* margin-left:6px ; */
+ box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+}
+
+.wishList-remove-btn .like-icon{
+color: #ff3f6c;
 }

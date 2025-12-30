@@ -6,7 +6,7 @@ import { MdDelete } from "react-icons/md";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
 import { wishListAction } from "../store/WishListSlice";
 
-const HomeItem = ({ item }) => {
+const WishListItem = ({ item }) => {
   const dispatch = useDispatch();
   const bagItems = useSelector((store) => store.bag);
   const WishListItems = useSelector((store) => store.wishList);
@@ -29,22 +29,28 @@ const HomeItem = ({ item }) => {
   const handleWishListRemove = () => {
     dispatch(wishListAction.removeFromWishList(item.id));
   };
-
   return (
     <>
       <div className="item-container">
-        <img className="item-image" src={item.image} alt="item image" />
+        <img
+          className="item-image"
+          src={item.image}
+          alt="item image"
+          onClick={scrollTo(0, 0)}
+        />
 
         <div className="rating">
           {item.rating.stars} ⭐ | {item.rating.count}
         </div>
         <div className="company-name">{item.company}</div>
         <div className="item-name">{item.item_name}</div>
+
         <div className="price">
           <span className="current-price">Rs {item.current_price}</span>
           <span className="original-price">Rs {item.original_price}</span>
           <span className="discount">({item.discount_percentage}% OFF)</span>
         </div>
+
         <div className="btn-add-div">
           {ElementFoud ? (
             <button className="btn-remove-bag" onClick={handleRemove}>
@@ -73,4 +79,4 @@ const HomeItem = ({ item }) => {
   );
 };
 
-export default HomeItem;
+export default WishListItem;

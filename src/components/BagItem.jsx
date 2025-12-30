@@ -8,6 +8,13 @@ const BagItem = ({ item }) => {
   const handleRemoveItem = () => {
     dispatch(bagActions.removeFromBag(item.id));
   };
+
+  const today = new Date();
+
+  const date = today.getDate() + 3;
+  const month = today.toLocaleString("en-US", { month: "long" });
+  const year = today.getFullYear();
+
   return (
     <div className="bag-items-container">
       <div className="bag-item-container">
@@ -31,8 +38,8 @@ const BagItem = ({ item }) => {
             return available
           </div>
           <div className="delivery-details">
-            Delivery by
-            <span className="delivery-details-days">{item.delivery_date}</span>
+            Delivery in {date} {month} {year}
+            <span className="delivery-details-days"></span>
           </div>
         </div>
 

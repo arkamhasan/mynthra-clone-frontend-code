@@ -11,6 +11,8 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import { useSelector } from "react-redux";
 
 import OrderPlaced from "./components/OrderPlaced";
+import Profile from "./routes/Profile";
+import WishList from "./routes/WishList";
 
 const App = () => {
   const fetchStatus = useSelector((store) => store.fetchStatus);
@@ -27,6 +29,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/bag" element={<Bag />} />
           <Route path="/donepayment" element={<OrderPlaced />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/wishlist" element={<WishList />} />
         </Routes>
       )}
 
