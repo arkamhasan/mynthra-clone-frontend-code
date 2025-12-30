@@ -739,27 +739,31 @@ font-size: 1.5rem;
 background-color: #fff;
 border: none;
 border-radius: 50%;
-width: 15%;
+width: 3rem;
+height: 3rem;
+
 text-align: center;
 padding:4px;
 transition: .5s;
-display: flex;
+display: block;
+
 /* margin-left:6px ; */
  box-shadow: 0 10px 15px rgba(0,0,0,0.08);
 
 }
 
 .wishList-add-btn:hover{
-font-size: 1.8rem;
+font-size: 1.65rem;
 }
 
 .wishList-remove-btn{
 font-size: 1.5rem;
-display: flex;
+width: 3rem;
+height: 3rem;
 background-color: #fff;
 border: none;
 border-radius: 50%;
-width: 15%;
+
 text-align: center;
 padding:4px;
 transition: .5s;
